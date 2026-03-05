@@ -1,0 +1,26 @@
+{"timestamp":"2026-03-05T00:00:04.291266Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-05T00:00:04.292115Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weather_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-05T00:00:04.317319Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weather_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-05T00:00:04.317590Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/weather_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-05T00:00:04.353996Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.354266Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.354394Z","level":"info","event":"Current task name:transform","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.354445Z","level":"info","event":"Dag name:openweather_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.355607Z","level":"info","event":"\nIniciando Transformação do DataFrame","logger":"root","filename":"transform_data.py","lineno":103}
+{"timestamp":"2026-03-05T00:00:04.355856Z","level":"info","event":"-> Criando Dataframe do Arquivo JSON...","logger":"root","filename":"transform_data.py","lineno":45}
+{"timestamp":"2026-03-05T00:00:04.363703Z","level":"info","event":"\nOK - Datframe Criado com 1 linha(s)","logger":"root","filename":"transform_data.py","lineno":56}
+{"timestamp":"2026-03-05T00:00:04.373350Z","level":"info","event":"\nOK - Coluna 'weather' normalizada - 30 colunas","logger":"root","filename":"transform_data.py","lineno":71}
+{"timestamp":"2026-03-05T00:00:04.373933Z","level":"info","event":"\nRemovendo Colunas: ['sys.type', 'weather', 'weather_icon']","logger":"root","filename":"transform_data.py","lineno":77}
+{"timestamp":"2026-03-05T00:00:04.377759Z","level":"info","event":"\nOK - Colunas Removidas - 27 colunas restantes","logger":"root","filename":"transform_data.py","lineno":81}
+{"timestamp":"2026-03-05T00:00:04.377952Z","level":"info","event":"\nRenomeando 26 Colunas","logger":"root","filename":"transform_data.py","lineno":87}
+{"timestamp":"2026-03-05T00:00:04.378696Z","level":"info","event":"\nOK - Colunas Renomeadas","logger":"root","filename":"transform_data.py","lineno":89}
+{"timestamp":"2026-03-05T00:00:04.378889Z","level":"info","event":"\nNormalizando Colunas para Datetime: ['datetime', 'sunrise', 'sunset']","logger":"root","filename":"transform_data.py","lineno":95}
+{"timestamp":"2026-03-05T00:00:04.386437Z","level":"info","event":"\nColuna datetime normalizada!","logger":"root","filename":"transform_data.py","lineno":98}
+{"timestamp":"2026-03-05T00:00:04.387408Z","level":"info","event":"\nColuna sunrise normalizada!","logger":"root","filename":"transform_data.py","lineno":98}
+{"timestamp":"2026-03-05T00:00:04.388403Z","level":"info","event":"\nColuna sunset normalizada!","logger":"root","filename":"transform_data.py","lineno":98}
+{"timestamp":"2026-03-05T00:00:04.388602Z","level":"info","event":"\nOK - Colunas convertidas para Datetime\n","logger":"root","filename":"transform_data.py","lineno":99}
+{"timestamp":"2026-03-05T00:00:04.388675Z","level":"info","event":"\nTransformações Concluídas","logger":"root","filename":"transform_data.py","lineno":109}
+{"timestamp":"2026-03-05T00:00:04.468611Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-05T00:00:04.493056Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.493231Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-05T00:00:04.493512Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): transform>","logger":"task.stdout"}
